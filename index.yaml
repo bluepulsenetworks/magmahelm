@@ -1,0 +1,58 @@
+apiVersion: v1
+entries:
+  lte-orc8r:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2021-03-02T05:38:49.644851901Z"
+    dependencies:
+    - name: orc8rlib
+      repository: file://../../../../orc8r/cloud/helm/orc8rlib
+      version: 0.1.2
+    description: A Helm chart for magma orchestrator's lte module
+    digest: d09ac750b162977486b284e5f0a626222fddd628b8d1d7f182d28f501479649f
+    keywords:
+    - magma
+    - or8cr
+    - lte-orc8r
+    name: lte-orc8r
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - lte-orc8r-0.2.2.tgz
+    version: 0.2.2
+  orc8r:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2021-03-02T05:38:49.65418988Z"
+    dependencies:
+    - condition: secrets.create
+      name: secrets
+      repository: ""
+      version: 0.1.10
+    - condition: metrics.enabled
+      name: metrics
+      repository: ""
+      version: 1.4.21
+    - condition: nms.enabled
+      name: nms
+      repository: ""
+      version: 0.1.9
+    - condition: logging.enabled
+      name: logging
+      repository: ""
+      version: 0.1.10
+    - name: orc8rlib
+      repository: file://../orc8rlib
+      version: 0.1.2
+    description: A Helm chart for magma orchestrator
+    digest: ce5cd28c7f220cd57558c7a351dd193a1f9290e848fc12ca5a09abda52df9050
+    keywords:
+    - magma
+    - or8cr
+    name: orc8r
+    sources:
+    - https://github.com/facebookincubator/magma
+    urls:
+    - orc8r-1.5.15.tgz
+    version: 1.5.15
+generated: "2021-03-02T05:38:49.642976387Z"
